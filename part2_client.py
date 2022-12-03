@@ -23,8 +23,7 @@ for i in range(5):
         clientSocket.close() # close the socket
         final_time = time() # time when message sending ends
         RTT = final_time - initial_time
-        print("Round Trip Time (RTT): " + "{:.3f}".format(RTT) + "ms" + "   Recieved message: " + message) # print the round trip time
-        # print("Recieved message: " + message) # print the recieved message
+        print("Round Trip Time (RTT): " + "{:.3f}".format(RTT) + "ms" + "   Sent message: " + message + "   Recieved message: " + modifiedMessage.decode()) # print the round trip time send and recieved messages
 
     except timeout:
         print("request timed out")
